@@ -10,6 +10,8 @@ A fully-featured personal budget tracking Android application built with Kotlin 
 
 Watch the full feature demonstration here:
 https://youtu.be/_Pfa8FhzgZI
+My youtube video was removed on youtube hence i have added the video in my project files called Video Presentation.
+
 
 ---
 
@@ -166,6 +168,13 @@ Glide Image Loading Library. Available at: https://github.com/bumptech/glide (Ac
 GitHub Actions for Android. Available at: https://github.com/marketplace/actions/automated-build-android-app-with-github-action (Accessed: 27 April 2026).
 
 GitHub Actions Android Workflow Example. Available at: https://github.com/IMAD5112/Github-actions/blob/main/.github/workflows/build.yml (Accessed: 27 April 2026).
+
+Gemini AI (Google, 2026) was used to assist with debugging errors in Android Studio and generating file structure. All generated code has been reviewed and understood by the author.
+
+Google (2026) Gemini [Large language model]. Available at: https://gemini.google.com (Accessed: 27 April 2026).
+
+Google (2026) Gemini response to prompt: 'Fix Visual Studio errors' [Large language model output]. Available at: https://gemini.google.com (Accessed: 27 April 2026).
+
 
 ---
 
