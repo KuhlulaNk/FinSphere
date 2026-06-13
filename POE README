@@ -1,0 +1,139 @@
+ST10440743 Nkuna Kuhlula OPSC6311 Final POE Submission
+# FinSphere
+
+Where Every Rand Has a Purpose.
+
+A fully-featured personal budget tracking Android application built with Kotlin and Room DB.
+Open Source Coding Module, Part 3 Final POE, 2026.
+
+---
+The video presentation video is on the Finsphere File
+---
+Github Link: https://github.com/KuhlulaNk/FinSphere
+## Purpose
+
+FinSphere helps South African users take full control of their personal finances through
+structured budgeting, intelligent goal tracking, visual analytics, and behavioural gamification.
+All data is stored locally using Room DB (SQLite) for full offline capability.
+
+---
+
+## Features
+
+### Core Features (Part 2)
+- User registration and secure login with SHA-256 password hashing
+- Create budget categories with custom colour coding
+- Add expense entries with date, start time, end time, amount, and description
+- Take and store a photo per expense entry using the device camera
+- View expense list filtered by a user-selectable period
+- Access stored photo from the expense list detail view
+- View total spending per category for a user-selectable period
+- Set minimum and maximum spending goals per category
+
+### New Features (Part 3)
+- Spending graph: bar chart showing amount spent per category with min/max goal limit lines
+- Goal progress: visual display of spending progress relative to goals for the current month
+- Gamification: 6 unlockable achievement badges with a points system
+
+---
+
+## Own Feature 1: Smart Expense Search
+
+Search all expense entries in real time by typing a keyword from the description.
+Results filter instantly as the user types, allowing quick retrieval of any transaction
+without needing to scroll through the full list or set a date range.
+Accessible from the dashboard under Own Features.
+
+Justification: Users who log many expenses need a fast way to locate specific transactions.
+This feature significantly improves usability and daily engagement with the application.
+
+---
+
+## Own Feature 2: Financial Health Score
+
+A composite score from 0 to 100 measuring overall financial discipline across three components:
+- Budget adherence (40 points): percentage of categories within their maximum spending goal
+- Logging activity (30 points): number of expense entries logged in the current month
+- Goal coverage (30 points): percentage of categories that have goals assigned
+
+The score provides a grade (Excellent, Good, Fair, Needs Work) with personalised advice.
+Accessible from the dashboard under Own Features.
+
+Justification: A single easy-to-understand metric summarises overall financial health,
+encouraging consistent logging and goal-setting behaviour through a gamified score.
+
+---
+
+## Design Considerations
+
+The application uses Material Design 3 with a deep navy base (#0D1B2A) and emerald green
+accent (#1BCC8A). All touch targets meet the 48dp Android accessibility minimum. Input
+validation is applied throughout. The architecture separates data, business logic, and
+presentation into clearly defined layers. The dashboard is organised into three sections:
+Core Features, Analytics, and Own Features.
+
+---
+
+## GitHub Actions
+
+Automated CI/CD is configured in .github/workflows/build.yml.
+On every push to main the workflow:
+1. Sets up JDK 17
+2. Runs all unit tests via ./gradlew test
+3. Builds the debug APK via ./gradlew assembleDebug
+4. Uploads the APK as a downloadable artifact
+
+Reference: https://github.com/IMAD5112/Github-actions/blob/main/.github/workflows/build.yml
+
+---
+
+## Tech Stack
+
+- Language: Kotlin
+- IDE: Android Studio
+- Database: Room DB (SQLite)
+- Graph library: MPAndroidChart v3.1.0
+- UI: Material Design 3, RecyclerView, ViewBinding
+- Photo: Camera Intent with FileProvider
+- Security: SHA-256 password hashing
+- CI/CD: GitHub Actions
+
+---
+
+## Project Structure
+
+   app/src/main/java/com/varsity/finsphere/
+   |-- data/
+   |   |-- AppDatabase.kt
+   |   |-- dao/  UserDao, CategoryDao, ExpenseEntryDao, GoalDao, BadgeDao
+   |   |-- entities/  User, Category, ExpenseEntry, Goal, Badge
+   |-- ui/
+   |   |-- categories/   CategoriesActivity, CategoryAdapter, AddCategoryActivity
+   |   |-- expenses/     AddExpenseActivity, ExpenseAdapter, ExpenseListActivity, ExpenseDetailActivity
+   |   |-- goals/        GoalsActivity, GoalAdapter
+   |   |-- reports/      CategoryTotalsActivity, CategoryTotalsAdapter
+   |   |-- graph/        SpendingGraphActivity
+   |   |-- progress/     GoalProgressActivity, GoalProgressAdapter
+   |   |-- gamification/ GamificationActivity, BadgeAdapter, BadgeManager
+   |   |-- search/       SearchExpenseActivity
+   |   |-- summary/      FinancialHealthActivity
+   |-- utils/  SessionManager, HashUtils, DateUtils
+   |-- LoginActivity, RegisterActivity, MainActivity
+
+---
+
+## References
+
+Android Developer Documentation. Available at: https://developer.android.com (Accessed: 8 June 2026).
+Room Database Guide. Available at: https://developer.android.com/training/data-storage/room (Accessed: 8 June 2026).
+Material Design 3 Guidelines. Available at: https://m3.material.io (Accessed: 8 June 2026).
+Kotlin Programming Language. Available at: https://kotlinlang.org (Accessed: 8 June 2026).
+MPAndroidChart Library. Available at: https://github.com/PhilJay/MPAndroidChart (Accessed: 8 June 2026).
+Glide Image Loading Library. Available at: https://github.com/bumptech/glide (Accessed: 8 June 2026).
+GitHub Actions for Android. Available at: https://github.com/marketplace/actions/automated-build-android-app-with-github-action (Accessed: 8 June 2026).
+GitHub Actions Workflow. Available at: https://github.com/IMAD5112/Github-actions/blob/main/.github/workflows/build.yml (Accessed: 8 June 2026).
+Google (2026) Gemini response to prompt: 'Fix Android Studio errors' [Large language model output]. Available at: https://gemini.google.com 
+
+---
+
+FinSphere - Open Source Coding, Final POE 2026
